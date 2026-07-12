@@ -29,7 +29,13 @@ jobs:
         run: |
           git config user.name "sunra-bot"
           git config user.email "sunra-bot@users.noreply.github.com"
-          git pull --rebase origin main || true
           git add posted_statics.json
-          git diff --staged --quiet || git commit -m "state: update posted statics [skip ci]"
-          git push || true
+          git diff --staged --quiet && { echo "no state change to push"; exit 0; }
+          git commit -m "state: update posted statics [skip ci]"
+          for i in 1 2 3 4 5; do
+            if git pull --rebase --autostash origin main && git push; then
+              echo "state pushed on attempt $i"; exit 0
+            fi
+            echo "push attempt $i lost a race, retrying..."; sleep $((RANDOM % 4 + 2))
+          done
+          echo "::error::failed to push posted_statics.json after 5 attempts"; exit 1

@@ -10,7 +10,19 @@ CFG = json.load(open("config.json"))
 
 def _get(path, params=None):
     p = dict(params or {}); p["access_token"] = TOKEN
-    return json.loads(urllib.request.urlopen(f"{GRAPH}/{path}?" + urllib.parse.urlencode(p), timeout=30).read())
+    try:
+        return json.loads(urllib.request.urlopen(f"{GRAPH}/{path}?" + urllib.parse.urlencode(p), timeout=30).read())
+    except urllib.error.HTTPError as e:
+        err = {}
+        try:
+            err = json.loads(e.read().decode()).get("error", {})
+        except Exception:
+            pass
+        msg = err.get("message") or str(e)
+        if err.get("code") == 190:
+            msg = f"META_PAGE_TOKEN invalid/expired (code 190) — refresh the GitHub secret. Meta says: {msg}"
+        print(f"[ERROR] GET {path} failed (HTTP {e.code}): {msg}")
+        raise SystemExit(1)
 
 
 def _post(path, params, timeout=180):
