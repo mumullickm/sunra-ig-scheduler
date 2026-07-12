@@ -1,0 +1,35 @@
+name: Sunra Statics publish
+
+# Statics to IG + FB, 3/day. Cron a few min after each BD slot (09:00/18:00/23:00 BD =
+# 03:00/12:00/17:00 UTC). Self-heals: any due-but-unposted static goes out next tick.
+on:
+  schedule:
+    - cron: '5 3 * * *'
+    - cron: '5 12 * * *'
+    - cron: '5 17 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sunra-publisher
+  cancel-in-progress: false
+
+jobs:
+  publish-statics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish due statics (IG + FB)
+        env:
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+        run: python3 run_statics.py
+      - name: Commit updated state
+        run: |
+          git config user.name "sunra-bot"
+          git config user.email "sunra-bot@users.noreply.github.com"
+          git pull --rebase origin main || true
+          git add posted_statics.json
+          git diff --staged --quiet || git commit -m "state: update posted statics [skip ci]"
+          git push || true

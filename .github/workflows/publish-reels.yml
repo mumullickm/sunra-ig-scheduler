@@ -1,0 +1,32 @@
+name: Sunra Reels publish
+
+# Reel to IG + FB daily at 21:00 BD (15:00 UTC). Self-heals.
+on:
+  schedule:
+    - cron: '5 15 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sunra-publisher
+  cancel-in-progress: false
+
+jobs:
+  publish-reels:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish due reels (IG + FB)
+        env:
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+        run: python3 run_reels.py
+      - name: Commit updated state
+        run: |
+          git config user.name "sunra-bot"
+          git config user.email "sunra-bot@users.noreply.github.com"
+          git pull --rebase origin main || true
+          git add posted_reels.json
+          git diff --staged --quiet || git commit -m "state: update posted reels [skip ci]"
+          git push || true
