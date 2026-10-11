@@ -1,10 +1,10 @@
 name: Sunra Statics publish
 
-# Statics to IG + FB, 1/day at 20:30 BD (14:30 UTC). Cron at 14:35 UTC, with a 17:05 UTC
+# Statics to IG + FB, 1/day at 21:00 BD (15:00 UTC). Cron at 15:05 UTC, with a 17:05 UTC
 # backup tick. Self-heals: any due-but-unposted static goes out next tick.
 on:
   schedule:
-    - cron: '35 14 * * *'
+    - cron: '5 15 * * *'
     - cron: '5 17 * * *'
   workflow_dispatch:
 
