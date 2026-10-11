@@ -3,7 +3,7 @@
 Auto-posts the [Sunra Content Studio](https://mumullickm.github.io/sunra-calendar/) assets to
 Instagram + Facebook (@sunraevbd) on a schedule, via the Meta Graph API. Wasilah/Hirra pattern.
 
-**Schedule (from 12 Jul 2026, 30 days):** statics 09:00 / 18:00 / 23:00 BD, reel 21:00 BD.
+**Schedule (round 2, 12 Oct to 10 Nov 2026):** one static a day at 20:30 BD (`r2-day01` to `r2-day30`).
 Self-healing: any due-but-unposted asset goes out on the next cron tick or manual run.
 
 **One secret required:** `META_PAGE_TOKEN` — a long-lived Facebook Page access token for the
