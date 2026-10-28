@@ -77,10 +77,14 @@
  },
  {
   "static": "legend-01-amalfi-mint",
-  "iso": "2026-10-28T07:30:00Z"
+  "iso": "2026-10-28T04:00:00Z"
  },
  {
   "static": "legend-02-k3-red",
+  "iso": "2026-10-28T07:30:00Z"
+ },
+ {
+  "static": "legend-03-f3-grey",
   "iso": "2026-10-28T12:00:00Z"
  },
  {
@@ -88,11 +92,11 @@
   "iso": "2026-10-28T15:00:00Z"
  },
  {
-  "static": "legend-03-f3-grey",
+  "static": "legend-04-amalfi-cream",
   "iso": "2026-10-29T07:30:00Z"
  },
  {
-  "static": "legend-04-amalfi-cream",
+  "static": "legend-05-f3-white",
   "iso": "2026-10-29T12:00:00Z"
  },
  {
@@ -100,11 +104,11 @@
   "iso": "2026-10-29T15:00:00Z"
  },
  {
-  "static": "legend-05-f3-white",
+  "static": "legend-12-k3-purple",
   "iso": "2026-10-30T08:30:00Z"
  },
  {
-  "static": "legend-12-k3-purple",
+  "static": "legend-07-f3-red",
   "iso": "2026-10-30T12:00:00Z"
  },
  {
@@ -112,11 +116,11 @@
   "iso": "2026-10-30T15:00:00Z"
  },
  {
-  "static": "legend-07-f3-red",
+  "static": "legend-06-amalfi-mint",
   "iso": "2026-10-31T07:30:00Z"
  },
  {
-  "static": "legend-06-amalfi-mint",
+  "static": "legend-08-f3-blue",
   "iso": "2026-10-31T12:00:00Z"
  },
  {
@@ -124,11 +128,11 @@
   "iso": "2026-10-31T15:00:00Z"
  },
  {
-  "static": "legend-08-f3-blue",
+  "static": "legend-14-f3-black",
   "iso": "2026-11-01T07:30:00Z"
  },
  {
-  "static": "legend-14-f3-black",
+  "static": "legend-15-k3-purple",
   "iso": "2026-11-01T12:00:00Z"
  },
  {
@@ -136,11 +140,11 @@
   "iso": "2026-11-01T15:00:00Z"
  },
  {
-  "static": "legend-15-k3-purple",
+  "static": "legend-09-sunra-street",
   "iso": "2026-11-02T07:30:00Z"
  },
  {
-  "static": "legend-09-sunra-street",
+  "static": "legend-17-f3-blue",
   "iso": "2026-11-02T12:00:00Z"
  },
  {
@@ -148,11 +152,11 @@
   "iso": "2026-11-02T15:00:00Z"
  },
  {
-  "static": "legend-17-f3-blue",
+  "static": "legend-16-k3-black",
   "iso": "2026-11-03T07:30:00Z"
  },
  {
-  "static": "legend-16-k3-black",
+  "static": "legend-11-sunra-blue",
   "iso": "2026-11-03T12:00:00Z"
  },
  {
@@ -160,11 +164,11 @@
   "iso": "2026-11-03T15:00:00Z"
  },
  {
-  "static": "legend-11-sunra-blue",
+  "static": "legend-18-k3-black",
   "iso": "2026-11-04T07:30:00Z"
  },
  {
-  "static": "legend-18-k3-black",
+  "static": "legend-19-f3-blue",
   "iso": "2026-11-04T12:00:00Z"
  },
  {
@@ -172,11 +176,11 @@
   "iso": "2026-11-04T15:00:00Z"
  },
  {
-  "static": "legend-19-f3-blue",
+  "static": "legend-10-sunra-ctg",
   "iso": "2026-11-05T07:30:00Z"
  },
  {
-  "static": "legend-10-sunra-ctg",
+  "static": "legend-21-k3-purple",
   "iso": "2026-11-05T12:00:00Z"
  },
  {
@@ -184,20 +188,16 @@
   "iso": "2026-11-05T15:00:00Z"
  },
  {
-  "static": "legend-21-k3-purple",
+  "static": "legend-13-f3-white",
   "iso": "2026-11-06T08:30:00Z"
  },
  {
-  "static": "legend-13-f3-white",
+  "static": "legend-20-sunra-red",
   "iso": "2026-11-06T12:00:00Z"
  },
  {
   "static": "r2-day27",
   "iso": "2026-11-06T15:00:00Z"
- },
- {
-  "static": "legend-20-sunra-red",
-  "iso": "2026-11-07T07:30:00Z"
  },
  {
   "static": "r2-day28",
