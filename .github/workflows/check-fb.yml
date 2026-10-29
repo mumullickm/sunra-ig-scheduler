@@ -1,0 +1,23 @@
+name: Sunra FB schedule check
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sunra-publisher
+  cancel-in-progress: false
+
+jobs:
+  check-fb:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sync latest state (never post from a stale checkout)
+        run: git fetch origin main && git reset --hard origin/main
+      - name: Check FB scheduled legends
+        env:
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+        run: python3 check_fb.py
