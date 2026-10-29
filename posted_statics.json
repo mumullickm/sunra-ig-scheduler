@@ -450,5 +450,77 @@
   "r2-day18": {
     "ig": "18354405442217347",
     "fb": "636061549588524_122244952244836289"
+  },
+  "legend-04-amalfi-cream": {
+    "ig": false,
+    "fb": "scheduled:122245119506836289"
+  },
+  "legend-05-f3-white": {
+    "ig": false,
+    "fb": "scheduled:122245119554836289"
+  },
+  "legend-12-k3-purple": {
+    "ig": false,
+    "fb": "scheduled:122245119602836289"
+  },
+  "legend-07-f3-red": {
+    "ig": false,
+    "fb": "scheduled:122245119650836289"
+  },
+  "legend-06-amalfi-mint": {
+    "ig": false,
+    "fb": "scheduled:122245119698836289"
+  },
+  "legend-08-f3-blue": {
+    "ig": false,
+    "fb": "scheduled:122245119746836289"
+  },
+  "legend-14-f3-black": {
+    "ig": false,
+    "fb": "scheduled:122245119794836289"
+  },
+  "legend-15-k3-purple": {
+    "ig": false,
+    "fb": "scheduled:122245119842836289"
+  },
+  "legend-09-sunra-street": {
+    "ig": false,
+    "fb": "scheduled:122245119890836289"
+  },
+  "legend-17-f3-blue": {
+    "ig": false,
+    "fb": "scheduled:122245119956836289"
+  },
+  "legend-16-k3-black": {
+    "ig": false,
+    "fb": "scheduled:122245120004836289"
+  },
+  "legend-11-sunra-blue": {
+    "ig": false,
+    "fb": "scheduled:122245120052836289"
+  },
+  "legend-18-k3-black": {
+    "ig": false,
+    "fb": "scheduled:122245120100836289"
+  },
+  "legend-19-f3-blue": {
+    "ig": false,
+    "fb": "scheduled:122245120208836289"
+  },
+  "legend-10-sunra-ctg": {
+    "ig": false,
+    "fb": "scheduled:122245120256836289"
+  },
+  "legend-21-k3-purple": {
+    "ig": false,
+    "fb": "scheduled:122245120304836289"
+  },
+  "legend-13-f3-white": {
+    "ig": false,
+    "fb": "scheduled:122245120352836289"
+  },
+  "legend-20-sunra-red": {
+    "ig": false,
+    "fb": "scheduled:122245120406836289"
   }
 }
