@@ -77,11 +77,11 @@ def main():
     page_id = _get("me").get("id"); ig = ig_user_id()
     due = [s for s in sched
            if datetime.datetime.fromisoformat(s["iso"].replace("Z", "+00:00")) <= now
-           and not (state.get(s["static"], {}).get("ig") and state.get(s["static"], {}).get("fb"))]
+           and not (state.get(s.get("key", s["static"]), {}).get("ig") and state.get(s.get("key", s["static"]), {}).get("fb"))]
     if not due:
         print(f"[{stamp}] no statics due"); return
     for s in due:
-        sid = s["static"]; st = state.setdefault(sid, {"ig": False, "fb": False})
+        sid = s["static"]; st = state.setdefault(s.get("key", sid), {"ig": False, "fb": False})
         if not st["ig"]:
             ok, info = publish_ig_image(ig, sid); st["ig"] = info if ok else False
             print(f"[{stamp}] IG static {sid}: {'published '+info if ok else info}")
